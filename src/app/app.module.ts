@@ -13,11 +13,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import localEs from '@angular/common/locales/es';
 import {registerLocaleData} from '@angular/common';
 
+
 registerLocaleData(localEs)
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
