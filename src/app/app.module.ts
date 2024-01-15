@@ -1,8 +1,19 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
+
+// Prime-ng Animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+//configuracion del locale de la app
+import localEs from '@angular/common/locales/es';
+import {registerLocaleData} from '@angular/common';
+
+registerLocaleData(localEs)
 
 @NgModule({
   declarations: [
@@ -10,9 +21,16 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PrimeNgModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {
+      //Pone en toda la aplicacion en español por defecto
+      provide: LOCALE_ID, useValue:'es'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
