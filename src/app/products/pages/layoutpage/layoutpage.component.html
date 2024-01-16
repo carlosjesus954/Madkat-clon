@@ -28,11 +28,14 @@
   <nav class="header__nav" [ngClass]="{ 'menu-visible': menuVisible$ | async }">
     <div class="header__nav--side header__nav--wrapper">
       <ul class="header__ul">
-        <li routerLink="" class="header__li--strong">{{ titleHome }}</li>
+        <li routerLink="" class="header__li--strong" (click)="ocultarMenu()">
+          {{ titleHome }}
+        </li>
         <li
           class="header__li"
           *ngFor="let i of itemsNav"
           [routerLink]="i.router"
+          (click)="ocultarMenu()"
         >
           {{ i.title | uppercase }}
         </li>
@@ -40,6 +43,7 @@
           class="header__li--strong"
           *ngFor="let i of itemsNavAuth"
           [routerLink]="i.router"
+          (click)="ocultarMenu()"
         >
           {{ i.title }}
         </li>
