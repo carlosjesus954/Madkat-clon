@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router'
 import { LayoutpageComponent } from './pages/layoutpage/layoutpage.component'
 import { CatalogoHomeComponent } from './pages/catalogo-home/catalogo-home.component'
 import { NewInPageComponent } from './pages/new-in-page/new-in-page.component'
+import { MadkatOnTourPageComponent } from './pages/madkat-on-tour-page/madkat-on-tour-page.component'
+import { OriginalsPageComponent } from './pages/originals-page/originals-page.component'
+import { HoodiesPageComponent } from './pages/hoodies-page/hoodies-page.component'
+import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.component'
+import { AccessoriesPageComponent } from './pages/accessories-page/accessories-page.component'
 
 const routes: Routes = [
   {
@@ -19,23 +24,23 @@ const routes: Routes = [
       },
       {
         path: 'madkatOnTour',
-        component: NewInPageComponent,
+        component: MadkatOnTourPageComponent,
       },
       {
         path: 'originals',
-        component: NewInPageComponent,
+        component: OriginalsPageComponent,
       },
       {
         path: 'hoodies',
-        component: NewInPageComponent,
+        component: HoodiesPageComponent,
       },
       {
         path: 'tShirts',
-        component: NewInPageComponent,
+        component: TShirtsPageComponent,
       },
       {
         path: 'accessories',
-        component: NewInPageComponent,
+        component: AccessoriesPageComponent,
       },
       {
         path: '**',

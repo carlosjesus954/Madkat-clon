@@ -1,7 +1,19 @@
 <header class="header">
-  <div class="header__flex">
+  <div class="header__flex wrapper">
     <div class="header__container">
-      <i class="pi pi-bars" style="font-size: 1.5rem"></i>
+      <i
+        (click)="ocultarMenu()"
+        *ngIf="menuVisible$ | async; else cerrarMenu"
+        class="pi pi-times"
+        style="font-size: 1.5rem"
+      ></i>
+      <ng-template #cerrarMenu>
+        <i
+          (click)="mostrarMenu()"
+          class="pi pi-bars"
+          style="font-size: 1.5rem"
+        ></i>
+      </ng-template>
       <img
         src="assets/logo-madkat.png"
         alt="logo madkat"
@@ -13,10 +25,47 @@
       <i class="pi pi-shopping-cart">Carrito</i>
     </div>
   </div>
-  <nav class="header__nav">
-    <h1>hola</h1>
+  <nav class="header__nav" [ngClass]="{ 'menu-visible': menuVisible$ | async }">
+    <div class="header__nav--side header__nav--wrapper">
+      <ul class="header__ul">
+        <li routerLink="" class="header__li--strong">{{ titleHome }}</li>
+        <li
+          class="header__li"
+          *ngFor="let i of itemsNav"
+          [routerLink]="i.router"
+        >
+          {{ i.title | uppercase }}
+        </li>
+        <li
+          class="header__li--strong"
+          *ngFor="let i of itemsNavAuth"
+          [routerLink]="i.router"
+        >
+          {{ i.title }}
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 <!-- Componente home -->
-<router-outlet></router-outlet>
+<div class="wrapper router--outlet">
+  <router-outlet></router-outlet>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore dolorum ex
+  eligendi reiciendis corrupti qui esse quaerat laboriosam, eveniet veniam
+  aspernatur optio culpa, facilis illum et unde modi officiis amet? Sequi,
+  quaerat impedit suscipit assumenda aperiam cupiditate inventore labore
+  deleniti soluta ipsam temporibus laudantium, voluptatum aspernatur cum
+  repudiandae praesentium tempora ad architecto amet accusantium voluptates et.
+  Magnam esse accusantium tempora! Corporis dolores nostrum eaque, harum quod
+  ipsa quam magni laudantium porro vitae. Ratione suscipit debitis, dignissimos
+  a eos, quo accusamus expedita vero rem dolorum perspiciatis eius magni numquam
+  eaque nobis. Quibusdam nihil veniam qui? Beatae nobis nihil consequatur eius
+  possimus cum ipsum ipsa autem nam neque aperiam laboriosam earum eligendi,
+  repellat tenetur minus corrupti exercitationem, sequi impedit! Corporis, sint
+  qui. Quibusdam a aspernatur consequuntur suscipit cumque labore dolores ullam
+  quae nesciunt sunt consequatur hic nisi pariatur provident voluptas tenetur
+  illum dicta tempora eaque in numquam, animi repellat. Obcaecati, dolores
+  distinctio.
+</div>
+
 <!-- Componente footer -->

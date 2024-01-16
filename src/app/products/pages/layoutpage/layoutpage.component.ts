@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { BehaviorSubject, Observable } from 'rxjs'
 
 @Component({
   selector: 'app-layoutpage',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core'
   styleUrls: ['./layoutpage.component.scss'],
 })
 export class LayoutpageComponent {
+  private menuVisible = new BehaviorSubject<boolean>(false)
+  public menuVisible$: Observable<boolean> = this.menuVisible.asObservable()
+
   public titleHome = 'Home'
   public itemsNav = [
     {
@@ -56,4 +60,11 @@ export class LayoutpageComponent {
       router: '',
     },
   ]
+
+  public mostrarMenu() {
+    this.menuVisible.next(true)
+  }
+  public ocultarMenu() {
+    this.menuVisible.next(false)
+  }
 }

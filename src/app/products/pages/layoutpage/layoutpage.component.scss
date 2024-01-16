@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
   position: fixed;
   width: 100%;
 
@@ -7,8 +7,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
     padding: 1rem;
   }
   &__container {
@@ -21,13 +19,68 @@
     width: 3rem;
   }
   &__nav {
-    background-color: rgba(255, 255, 255, 0.31);
+    background-color: rgba(255, 255, 255, 0.723);
     position: fixed;
     height: 100vh;
     width: 100vw;
+    transition: 0.5s all;
+    //esconder el nav
+    left: -100%;
+  }
+  &__nav--side {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 15rem;
+    padding: 1rem;
+  }
+  &__ul {
+    display: flex;
+    align-items: start;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  &__li--strong {
+    cursor: pointer;
+    transition: 0.4s all;
+    opacity: 1;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    &:hover {
+      transition: 0.4s all;
+      opacity: 0.8;
+      color: rgb(222, 222, 222);
+    }
+  }
+  &__li {
+    cursor: pointer;
+    transition: 0.4s all;
+    opacity: 1;
+    font-size: 0.8rem;
+    &:hover {
+      transition: 0.4s all;
+      opacity: 0.8;
+      color: rgb(222, 222, 222);
+    }
+  }
+  &__nav--wrapper {
+    // max-width: 1500px;
   }
 }
 i {
   display: flex;
   gap: 0.4rem;
+}
+
+.wrapper {
+  max-width: 1850px;
+  margin: auto;
+}
+
+.router--outlet {
+  padding: 8rem 1rem 1rem 1rem;
+}
+.menu-visible {
+  transition: 0.5s all;
+  left: 0;
 }
