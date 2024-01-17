@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  span {
+    font-size: 0.8rem;
+  }
+  &__ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 2rem;
+  }
+  &__li {
+    font-size: 0.8rem;
+  }
+}

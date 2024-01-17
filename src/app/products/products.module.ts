@@ -11,7 +11,8 @@ import { NewInPageComponent } from './pages/new-in-page/new-in-page.component'
 import { OriginalsPageComponent } from './pages/originals-page/originals-page.component'
 import { ProductsRoutingModule } from './products-routing.module'
 import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.component'
-import { PrimeNgModule } from '../prime-ng/prime-ng.module'
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module'
     HoodiesPageComponent,
     TShirtsPageComponent,
     AccessoriesPageComponent,
+    FooterComponent,
   ],
   imports: [CommonModule, ProductsRoutingModule, PrimeNgModule],
   exports: [ProductsRoutingModule],
