@@ -1,6 +1,10 @@
 <div class="catalogo">
   <div class="catalogo__grid">
-    <p-card *ngFor="let c of catalogoInfo" class="catalogo__card">
+    <p-card
+      *ngFor="let c of catalogoInfo"
+      class="catalogo__card"
+      (click)="navigateColection(c.routerLink)"
+    >
       <img [src]="c.src" [alt]="c.title" />
       <div class="catalogo__absolute">
         <div class="catalogo__flex">
