@@ -1,1 +1,12 @@
-<p>catalogo-home works!</p>
+<div class="catalogo">
+  <div class="catalogo__grid">
+    <p-card *ngFor="let c of catalogoInfo" class="catalogo__card">
+      <img [src]="c.src" [alt]="c.title" />
+      <div class="catalogo__absolute">
+        <div class="catalogo__flex">
+          <h1 class="catalogo__h1">{{ c.title | uppercase }}</h1>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>
