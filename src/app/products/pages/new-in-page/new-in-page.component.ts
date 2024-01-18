@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Product } from '../../interfaces/product.interface'
 import { Router } from '@angular/router'
+import { ProductsService } from '../../services/products.service'
 
 @Component({
   selector: 'app-new-in-page',
@@ -63,11 +64,14 @@ export class NewInPageComponent {
       ],
     },
   ]
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private productService: ProductsService,
+  ) {}
 
   public selectedProduct(product: Product) {
-    console.log('NewInPage', product)
     if (!product) return
-    this.router.navigateByUrl('/colecciones'), { state: { producto: product } }
+    this.productService.actualizarProductoSeleccionado(product)
+    this.router.navigateByUrl('/colecciones')
   }
 }

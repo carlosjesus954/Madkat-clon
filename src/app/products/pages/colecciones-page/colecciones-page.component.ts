@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router'
 import { Product } from '../../interfaces/product.interface'
 import { filter } from 'rxjs'
+import { ProductsService } from '../../services/products.service'
 
 @Component({
   selector: 'app-colecciones-page',
@@ -17,21 +18,13 @@ export class ColeccionesPageComponent implements OnInit {
     coleccion: '',
     imgs: [],
   }
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-  ) {}
+  constructor(private productService: ProductsService) {}
   ngOnInit(): void {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        // Accede al estado de la ruta después de que la navegación haya terminado
-        const state = this.router.getCurrentNavigation()?.extras.state
-
-        if (state && state['producto']) {
-          this.productoSeleccionado = state['producto']
-          console.log('COlecciones', this.productoSeleccionado)
-        }
-      })
+    this.productService.productoSeleccionado$.subscribe(producto => {
+      if (producto) {
+        this.productoSeleccionado = producto
+        console.log('colecciones', producto)
+      }
+    })
   }
 }
