@@ -1,0 +1,23 @@
+.coleccion {
+  text-align: center;
+  &__h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__h2 {
+    font-weight: bold;
+  }
+  &__card {
+    cursor: pointer;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  &__span {
+    font-weight: lighter;
+    font-size: 0.8rem;
+  }
+}

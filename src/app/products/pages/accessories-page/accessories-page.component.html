@@ -1,1 +1,21 @@
-<p>accessories-page works!</p>
+<div class="coleccion">
+  <h1 class="coleccion__h1">
+    {{ coleccion | uppercase }}
+  </h1>
+  <div class="coleccion__grid">
+    <p-card
+      *ngFor="let i of catalogoMadkatOnTour"
+      class="coleccion__card"
+      (mouseenter)="i.hovered = true"
+      (mouseleave)="i.hovered = false"
+    >
+      <img [src]="i.hovered ? i.src2 : i.src" [alt]="i.title" />
+      <div class="p-card-footer">
+        <h2 class="coleccion__h2">
+          {{ i.title }}
+        </h2>
+        <span class="coleccion__span"> {{ i.precio }}€ </span>
+      </div>
+    </p-card>
+  </div>
+</div>
