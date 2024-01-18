@@ -3,7 +3,11 @@
     {{ coleccion | uppercase }}
   </h1>
   <div class="coleccion__grid">
-    <p-card *ngFor="let i of catalogoNewIn" class="coleccion__card">
+    <p-card
+      *ngFor="let i of catalogoNewIn"
+      class="coleccion__card"
+      (click)="selectedProduct(i)"
+    >
       <img [src]="i.src" [alt]="i.title" />
       <div class="p-card-footer">
         <h2 class="coleccion__h2">

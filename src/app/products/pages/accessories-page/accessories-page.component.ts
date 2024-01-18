@@ -35,7 +35,7 @@ export class AccessoriesPageComponent {
     {
       id: 3,
       title: 'RUBIUS PREMIUM GAMING CHAIR feat. DRIFT',
-      precio: 390.9,
+      precio: 390.99,
       src: 'assets/accesories/ACCESORIES_3_1.png',
       src2: 'assets/accesories/ACCESORIES_3_2.png',
       hovered: false,

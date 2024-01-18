@@ -8,6 +8,7 @@ import { OriginalsPageComponent } from './pages/originals-page/originals-page.co
 import { HoodiesPageComponent } from './pages/hoodies-page/hoodies-page.component'
 import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.component'
 import { AccessoriesPageComponent } from './pages/accessories-page/accessories-page.component'
+import { ColeccionesPageComponent } from './pages/colecciones-page/colecciones-page.component'
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'accessories',
         component: AccessoriesPageComponent,
+      },
+      {
+        path: 'colecciones',
+        component: ColeccionesPageComponent,
       },
       {
         path: '**',
