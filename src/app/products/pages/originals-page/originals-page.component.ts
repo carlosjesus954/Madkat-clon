@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
-
+import { Product } from '../../interfaces/product.interface'
+import { Router } from '@angular/router'
+import { ProductsService } from '../../services/products.service'
 @Component({
   selector: 'app-originals-page',
   templateUrl: './originals-page.component.html',
@@ -11,34 +13,68 @@ export class OriginalsPageComponent {
     {
       id: 0,
       title: 'Originals - Camiseta',
+      coleccion: 'originals',
       precio: 24.99,
       src: 'assets/originals/ORIGINALS_0_1.jpg',
       src2: 'assets/originals/ORIGINALS_0_2.jpg',
       hovered: false,
+      imgs: [
+        'assets/originals/id-0/originals-carrusel-1.jpg',
+        'assets/originals/id-0/originals-carrusel-2.jpg',
+        'assets/originals/id-0/originals-carrusel-3.jpg',
+      ],
     },
     {
       id: 1,
       title: 'Originals - Camiseta',
+      coleccion: 'originals',
       precio: 24.99,
       src: 'assets/originals/ORIGINALS_1_1.jpg',
       src2: 'assets/originals/ORIGINALS_1_2.jpg',
       hovered: false,
+      imgs: [
+        'assets/originals/id-1/originals-carrusel-1.jpg',
+        'assets/originals/id-1/originals-carrusel-2.jpg',
+        'assets/originals/id-1/originals-carrusel-3.jpg',
+      ],
     },
     {
       id: 2,
       title: 'Originals - Sudadera',
+      coleccion: 'originals',
       precio: 39.99,
       src: 'assets/originals/ORIGINALS_2_1.jpg',
       src2: 'assets/originals/ORIGINALS_2_2.jpg',
       hovered: false,
+      imgs: [
+        'assets/originals/id-2/originals-carrusel-1.jpg',
+        'assets/originals/id-2/originals-carrusel-2.jpg',
+        'assets/originals/id-2/originals-carrusel-3.jpg',
+      ],
     },
     {
       id: 3,
       title: 'Originals - Sudadera',
+      coleccion: 'originals',
       precio: 39.99,
       src: 'assets/originals/ORIGINALS_3_1.jpg',
       src2: 'assets/originals/ORIGINALS_3_2.jpg',
       hovered: false,
+      imgs: [
+        'assets/originals/id-3/originals-carrusel-1.jpg',
+        'assets/originals/id-3/originals-carrusel-2.jpg',
+        'assets/originals/id-3/originals-carrusel-3.jpg',
+      ],
     },
   ]
+  constructor(
+    private router: Router,
+    private productService: ProductsService,
+  ) {}
+
+  public selectedProduct(product: Product) {
+    if (!product) return
+    this.productService.actualizarProductoSeleccionado(product)
+    this.router.navigateByUrl('/colecciones')
+  }
 }

@@ -18,7 +18,7 @@ export class NewInPageComponent {
       src: 'assets/newIn/newIn-0.jpg',
       coleccion: 'newIn',
       imgs: [
-        'assets/newIn/newIn-0',
+        'assets/newIn/id-0/newIn-carrusel-4.jpg',
         'assets/newIn/id-0/newIn-carrusel-1.jpg',
         'assets/newIn/id-0/newIn-carrusel-2.jpg',
         'assets/newIn/id-0/newIn-carrusel-3.jpg',

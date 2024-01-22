@@ -1,1 +1,10 @@
-<p>colecciones-page works!</p>
+<!-- colecciones-page.component.html -->
+<div *ngIf="productoSeleccionado.length > 0">
+  <div class="product-gallery">
+    <p-carousel [value]="productoSeleccionado[0].imgs">
+      <ng-template let-img pTemplate="item">
+        <img [src]="img" alt="Product Image" />
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

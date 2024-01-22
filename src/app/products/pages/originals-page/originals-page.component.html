@@ -5,6 +5,7 @@
   <div class="coleccion__grid">
     <p-card
       *ngFor="let i of catalogoOriginals"
+      (click)="selectedProduct(i)"
       class="coleccion__card"
       (mouseenter)="i.hovered = true"
       (mouseleave)="i.hovered = false"

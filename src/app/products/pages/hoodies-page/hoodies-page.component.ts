@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
-
+import { Product } from '../../interfaces/product.interface'
+import { Router } from '@angular/router'
+import { ProductsService } from '../../services/products.service'
 @Component({
   selector: 'app-hoodies-page',
   templateUrl: './hoodies-page.component.html',
@@ -41,4 +43,14 @@ export class HoodiesPageComponent {
       hovered: false,
     },
   ]
+  constructor(
+    private router: Router,
+    private productService: ProductsService,
+  ) {}
+
+  public selectedProduct(product: Product) {
+    if (!product) return
+    this.productService.actualizarProductoSeleccionado(product)
+    this.router.navigateByUrl('/colecciones')
+  }
 }

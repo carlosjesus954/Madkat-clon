@@ -10,20 +10,14 @@ import { ProductsService } from '../../services/products.service'
   styleUrls: ['./colecciones-page.component.scss'],
 })
 export class ColeccionesPageComponent implements OnInit {
-  public productoSeleccionado: Product = {
-    id: -1,
-    title: '',
-    precio: 0,
-    src: '',
-    coleccion: '',
-    imgs: [],
-  }
+  public productoSeleccionado: Product[] = [] // Inicializar como un array vacío
   constructor(private productService: ProductsService) {}
+
   ngOnInit(): void {
     this.productService.productoSeleccionado$.subscribe(producto => {
       if (producto) {
-        this.productoSeleccionado = producto
-        console.log('colecciones', producto)
+        this.productoSeleccionado = [producto] // Convertir el producto en un array
+        console.log('colecciones', this.productoSeleccionado)
       }
     })
   }
