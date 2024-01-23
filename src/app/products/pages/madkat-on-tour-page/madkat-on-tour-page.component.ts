@@ -17,6 +17,13 @@ export class MadkatOnTourPageComponent {
       src: 'assets/madkatOnTour/MADKAT_0_1.jpg',
       src2: 'assets/madkatOnTour/MADKAT_0_2.jpg',
       hovered: false,
+      coleccion: 'madkatOnTour',
+      imgs: [
+        'assets/madkatOnTour/id-0/madkat-carrusel-1.jpg',
+        'assets/madkatOnTour/id-0/madkat-carrusel-2.jpg',
+        'assets/madkatOnTour/id-0/madkat-carrusel-3.jpg',
+        'assets/madkatOnTour/id-0/madkat-carrusel-4.jpg',
+      ],
     },
     {
       id: 1,
@@ -25,6 +32,13 @@ export class MadkatOnTourPageComponent {
       src: 'assets/madkatOnTour/MADKAT_1_1.jpg',
       src2: 'assets/madkatOnTour/MADKAT_1_2.jpg',
       hovered: false,
+      coleccion: 'madkatOnTour',
+      imgs: [
+        'assets/madkatOnTour/id-1/madkat-carrusel-1.jpg',
+        'assets/madkatOnTour/id-1/madkat-carrusel-2.jpg',
+        'assets/madkatOnTour/id-1/madkat-carrusel-3.jpg',
+        'assets/madkatOnTour/id-1/madkat-carrusel-4.jpg',
+      ],
     },
     {
       id: 2,
@@ -33,6 +47,13 @@ export class MadkatOnTourPageComponent {
       src: 'assets/madkatOnTour/MADKAT_2_1.jpg',
       src2: 'assets/madkatOnTour/MADKAT_2_2.jpg',
       hovered: false,
+      coleccion: 'madkatOnTour',
+      imgs: [
+        'assets/madkatOnTour/id-2/madkat-carrusel-1.jpg',
+        'assets/madkatOnTour/id-2/madkat-carrusel-2.jpg',
+        'assets/madkatOnTour/id-2/madkat-carrusel-3.jpg',
+        'assets/madkatOnTour/id-2/madkat-carrusel-4.jpg',
+      ],
     },
     {
       id: 3,
@@ -41,6 +62,13 @@ export class MadkatOnTourPageComponent {
       src: 'assets/madkatOnTour/MADKAT_3_1.jpg',
       src2: 'assets/madkatOnTour/MADKAT_3_2.jpg',
       hovered: false,
+      coleccion: 'madkatOnTour',
+      imgs: [
+        'assets/madkatOnTour/id-3/madkat-carrusel-1.jpg',
+        'assets/madkatOnTour/id-3/madkat-carrusel-2.jpg',
+        'assets/madkatOnTour/id-3/madkat-carrusel-3.jpg',
+        'assets/madkatOnTour/id-3/madkat-carrusel-4.jpg',
+      ],
     },
   ]
   constructor(

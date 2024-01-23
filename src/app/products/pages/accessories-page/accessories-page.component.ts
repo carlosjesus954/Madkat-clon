@@ -17,6 +17,15 @@ export class AccessoriesPageComponent {
       src: 'assets/accesories/ACCESORIES_0_1.png',
       src2: 'assets/accesories/ACCESORIES_0_2.png',
       hovered: false,
+      coleccion: 'accesories',
+      imgs: [
+        'assets/accesories/id-0/a-c-1.png',
+        'assets/accesories/id-0/a-c-2.png',
+        'assets/accesories/id-0/a-c-3.png',
+        'assets/accesories/id-0/a-c-4.png',
+        'assets/accesories/id-0/a-c-5.png',
+        'assets/accesories/id-0/a-c-6.png',
+      ],
     },
     {
       id: 1,
@@ -25,6 +34,12 @@ export class AccessoriesPageComponent {
       src: 'assets/accesories/ACCESORIES_1_1.png',
       src2: 'assets/accesories/ACCESORIES_1_2.png',
       hovered: false,
+      coleccion: 'accesories',
+      imgs: [
+        'assets/accesories/id-1/a-c-1.png',
+        'assets/accesories/id-1/a-c-2.png',
+        'assets/accesories/id-1/a-c-3.jpg',
+      ],
     },
     {
       id: 2,
@@ -33,6 +48,14 @@ export class AccessoriesPageComponent {
       src: 'assets/accesories/ACCESORIES_2_1.png',
       src2: 'assets/accesories/ACCESORIES_2_2.png',
       hovered: false,
+      coleccion: 'accesories',
+      imgs: [
+        'assets/accesories/id-2/a-c-1.png',
+        'assets/accesories/id-2/a-c-2.png',
+        'assets/accesories/id-2/a-c-3.jpg',
+        'assets/accesories/id-2/a-c-4.jpg',
+        'assets/accesories/id-2/a-c-5.jpg',
+      ],
     },
     {
       id: 3,
@@ -41,6 +64,13 @@ export class AccessoriesPageComponent {
       src: 'assets/accesories/ACCESORIES_3_1.png',
       src2: 'assets/accesories/ACCESORIES_3_2.png',
       hovered: false,
+      coleccion: 'accesories',
+      imgs: [
+        'assets/accesories/id-3/a-c-1.png',
+        'assets/accesories/id-3/a-c-2.png',
+        'assets/accesories/id-3/a-c-3.jpg',
+        'assets/accesories/id-3/a-c-4.jpg',
+      ],
     },
   ]
   constructor(

@@ -8,7 +8,7 @@ import { ProductsService } from '../../services/products.service'
   styleUrls: ['./hoodies-page.component.scss'],
 })
 export class HoodiesPageComponent {
-  public coleccion: string = 'madkat on tour'
+  public coleccion: string = 'sudaderas'
   public catalogoHoodies = [
     {
       id: 0,
@@ -17,6 +17,13 @@ export class HoodiesPageComponent {
       src: 'assets/hoodies/HOODIES_0_1.jpg',
       src2: 'assets/hoodies/HOODIES_0_2.jpg',
       hovered: false,
+      coleccion: 'hoodies',
+      imgs: [
+        'assets/hoodies/id-0/hoodies-carrusel-1.jpg',
+        'assets/hoodies/id-0/hoodies-carrusel-2.jpg',
+        'assets/hoodies/id-0/hoodies-carrusel-3.jpg',
+        'assets/hoodies/id-0/hoodies-carrusel-4.jpg',
+      ],
     },
     {
       id: 1,
@@ -25,6 +32,13 @@ export class HoodiesPageComponent {
       src: 'assets/hoodies/HOODIES_1_1.jpg',
       src2: 'assets/hoodies/HOODIES_1_2.jpg',
       hovered: false,
+      coleccion: 'hoodies',
+      imgs: [
+        'assets/hoodies/id-1/hoodies-carrusel-1.jpg',
+        'assets/hoodies/id-1/hoodies-carrusel-2.jpg',
+        'assets/hoodies/id-1/hoodies-carrusel-3.jpg',
+        'assets/hoodies/id-1/hoodies-carrusel-4.jpg',
+      ],
     },
     {
       id: 2,
@@ -33,6 +47,13 @@ export class HoodiesPageComponent {
       src: 'assets/hoodies/HOODIES_2_1.jpg',
       src2: 'assets/hoodies/HOODIES_2_2.jpg',
       hovered: false,
+      coleccion: 'hoodies',
+      imgs: [
+        'assets/hoodies/id-2/hoodies-carrusel-1.jpg',
+        'assets/hoodies/id-2/hoodies-carrusel-2.jpg',
+        'assets/hoodies/id-2/hoodies-carrusel-3.jpg',
+        'assets/hoodies/id-2/hoodies-carrusel-4.jpg',
+      ],
     },
     {
       id: 3,
@@ -41,6 +62,13 @@ export class HoodiesPageComponent {
       src: 'assets/hoodies/HOODIES_3_1.jpg',
       src2: 'assets/hoodies/HOODIES_3_2.jpg',
       hovered: false,
+      coleccion: 'hoodies',
+      imgs: [
+        'assets/hoodies/id-3/hoodies-carrusel-1.jpg',
+        'assets/hoodies/id-3/hoodies-carrusel-2.jpg',
+        'assets/hoodies/id-3/hoodies-carrusel-3.jpg',
+        'assets/hoodies/id-3/hoodies-carrusel-4.jpg',
+      ],
     },
   ]
   constructor(

@@ -6,6 +6,7 @@
     <p-card
       *ngFor="let i of catalogoMadkatOnTour"
       class="coleccion__card"
+      (click)="selectedProduct(i)"
       (mouseenter)="i.hovered = true"
       (mouseleave)="i.hovered = false"
     >
