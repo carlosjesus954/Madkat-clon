@@ -12,7 +12,7 @@ import { ProductsService } from '../../services/products.service'
 export class ColeccionesPageComponent implements OnInit {
   public productoSeleccionado: Product[] = [] // Inicializar como un array vacío
   constructor(private productService: ProductsService) {}
-
+  public tallasDisponibles: string[] = ['s', 'm', 'l', 'xl', 'xxl']
   ngOnInit(): void {
     this.productService.productoSeleccionado$.subscribe(producto => {
       if (producto) {

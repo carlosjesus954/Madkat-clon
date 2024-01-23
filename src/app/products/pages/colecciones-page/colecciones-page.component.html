@@ -1,10 +1,38 @@
 <!-- colecciones-page.component.html -->
-<div *ngIf="productoSeleccionado.length > 0">
-  <div class="product-gallery">
+<div *ngIf="productoSeleccionado.length > 0" class="colecciones">
+  <div class="colecciones__gallery">
     <p-carousel [value]="productoSeleccionado[0].imgs">
       <ng-template let-img pTemplate="item">
-        <img [src]="img" alt="Product Image" />
+        <img [src]="img" alt="Product Image" class="colecciones__img" />
       </ng-template>
     </p-carousel>
+  </div>
+  <div class="container" *ngFor="let product of productoSeleccionado">
+    <h1 class="container__h1">
+      {{ product.title }}
+    </h1>
+    <span class="container__price">{{ product.precio }}€</span>
+    <div class="container__talla">
+      <div class="container__tallas">
+        <button
+          *ngFor="let b of tallasDisponibles"
+          pButton
+          [label]="b | uppercase"
+          class="p-button-secondary"
+        ></button>
+      </div>
+
+      <button
+        pButton
+        label="Añadir a la cesta"
+        class="p-button-secondary"
+      ></button>
+      <p-divider></p-divider>
+      <span class="container__detalle">Texto</span>
+      <ul>
+        <li>texto</li>
+        <li>text</li>
+      </ul>
+    </div>
   </div>
 </div>
