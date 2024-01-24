@@ -8,15 +8,20 @@ import { Product } from '../interfaces/product.interface'
 export class ProductsService {
   private productoSeleccionado = new BehaviorSubject<Product | null>(null)
   productoSeleccionado$ = this.productoSeleccionado.asObservable()
-  privateCarritoState = new BehaviorSubject<Product[] | null>(null)
-  carritoActual$ = this.privateCarritoState.asObservable()
+  private carritoState = new BehaviorSubject<Product[]>([]) // Inicializa el carrito como un array vacío
+  carritoActual$ = this.carritoState.asObservable()
+
   constructor() {}
+
   public actualizarProductoSeleccionado(producto: Product) {
     this.productoSeleccionado.next(producto)
   }
+
   public actualizarCarrito(producto: Product, talla: string) {
     producto.talla = talla
-    this.privateCarritoState.next([producto])
-    console.log('SERVICIO CARRITO', producto)
+    let currentCart = this.carritoState.value // Obtén el carrito actual
+    currentCart.push(producto) // Añade el nuevo producto al carrito
+    this.carritoState.next(currentCart) // Actualiza el estado del carrito
+    console.log('SERVICIO CARRITO', currentCart)
   }
 }
