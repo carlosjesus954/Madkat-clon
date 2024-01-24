@@ -39,6 +39,20 @@
     justify-content: center;
     gap: 1rem;
   }
+  &__detalle {
+    text-align: center;
+    font-weight: bold;
+  }
+  &__ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  &__li {
+    font-size: 0.9rem;
+    list-style: circle;
+  }
 }
 .active {
   background-color: rgb(47, 47, 47);

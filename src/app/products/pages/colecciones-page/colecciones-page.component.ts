@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router'
+import { Router } from '@angular/router'
 import { Product } from '../../interfaces/product.interface'
 import { filter } from 'rxjs'
 import { ProductsService } from '../../services/products.service'
@@ -13,7 +13,10 @@ export class ColeccionesPageComponent implements OnInit {
   public productoSeleccionado: Product[] = [] // Inicializar como un array vacío
   public tallaSeleccionada: string = 'l'
 
-  constructor(private productService: ProductsService) {}
+  constructor(
+    private productService: ProductsService,
+    private router: Router,
+  ) {}
   public tallasDisponibles: string[] = ['s', 'm', 'l', 'xl', 'xxl']
   ngOnInit(): void {
     this.productService.productoSeleccionado$.subscribe(producto => {

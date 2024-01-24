@@ -32,12 +32,20 @@
         class="p-button-secondary"
       ></button>
       <p-divider></p-divider>
-      <span class="container__detalle">Texto</span>
+      <span class="container__detalle">{{
+        productoSeleccionado[0].comment
+      }}</span>
       <ul class="container__ul">
-        <li *ngFor="let detail of productoSeleccionado" class="container__li">
-          {{ detail.details }}
+        <li
+          *ngFor="let detail of productoSeleccionado[0].details"
+          class="container__li"
+        >
+          {{ detail }}
         </li>
       </ul>
     </div>
   </div>
+</div>
+<div class="carrito__fixed">
+  <app-carrito></app-carrito>
 </div>

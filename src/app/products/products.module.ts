@@ -13,7 +13,8 @@ import { ProductsRoutingModule } from './products-routing.module'
 import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.component'
 import { PrimeNgModule } from '../prime-ng/prime-ng.module'
 import { FooterComponent } from './components/footer/footer.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { CarritoComponent } from './components/carrito/carrito.component'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms'
     TShirtsPageComponent,
     AccessoriesPageComponent,
     FooterComponent,
+    CarritoComponent,
   ],
 
   imports: [CommonModule, ProductsRoutingModule, PrimeNgModule, FormsModule],

@@ -11,10 +11,18 @@ export class ProductsService {
   private carritoState = new BehaviorSubject<Product[]>([]) // Inicializa el carrito como un array vacío
   carritoActual$ = this.carritoState.asObservable()
 
-  constructor() {}
+  constructor() {
+    const storedCart = JSON.parse(localStorage.getItem('carrito') || '[]')
+    const storedProduct = JSON.parse(
+      localStorage.getItem('productoSeleccionado') || 'null',
+    )
+    this.carritoState.next(storedCart)
+    this.productoSeleccionado.next(storedProduct)
+  }
 
   public actualizarProductoSeleccionado(producto: Product) {
     this.productoSeleccionado.next(producto)
+    localStorage.setItem('productoSeleccionado', JSON.stringify(producto))
   }
 
   public actualizarCarrito(producto: Product, talla: string) {
@@ -23,5 +31,7 @@ export class ProductsService {
     currentCart.push(producto) // Añade el nuevo producto al carrito
     this.carritoState.next(currentCart) // Actualiza el estado del carrito
     console.log('SERVICIO CARRITO', currentCart)
+
+    localStorage.setItem('carrito', JSON.stringify(currentCart))
   }
 }
