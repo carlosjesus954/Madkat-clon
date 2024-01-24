@@ -7,4 +7,5 @@ export interface Product {
   title: string
   imgs: string[]
   src?: string
+  talla?: string
 }

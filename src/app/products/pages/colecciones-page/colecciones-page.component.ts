@@ -11,6 +11,8 @@ import { ProductsService } from '../../services/products.service'
 })
 export class ColeccionesPageComponent implements OnInit {
   public productoSeleccionado: Product[] = [] // Inicializar como un array vacío
+  public tallaSeleccionada: string = 'l'
+
   constructor(private productService: ProductsService) {}
   public tallasDisponibles: string[] = ['s', 'm', 'l', 'xl', 'xxl']
   ngOnInit(): void {
@@ -20,5 +22,15 @@ export class ColeccionesPageComponent implements OnInit {
         console.log('colecciones', this.productoSeleccionado)
       }
     })
+  }
+  public selectTalla(talla: string) {
+    this.tallaSeleccionada = talla
+    console.log(this.tallaSeleccionada)
+  }
+  public addProduct(producto: Product) {
+    console.log('COLECCIONES AÑADIR CESTA', producto)
+    if (producto) {
+      this.productService.actualizarCarrito(producto, this.tallaSeleccionada)
+    }
   }
 }

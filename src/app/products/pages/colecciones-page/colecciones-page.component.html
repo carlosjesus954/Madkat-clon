@@ -19,11 +19,15 @@
           pButton
           [label]="b | uppercase"
           class="p-button-secondary"
+          [ngClass]="{ active: tallaSeleccionada === b }"
+          (click)="selectTalla(b)"
         ></button>
       </div>
 
       <button
         pButton
+        *ngFor="let product of productoSeleccionado"
+        (click)="addProduct(product)"
         label="Añadir a la cesta"
         class="p-button-secondary"
       ></button>

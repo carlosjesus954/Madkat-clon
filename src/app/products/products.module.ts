@@ -11,8 +11,9 @@ import { NewInPageComponent } from './pages/new-in-page/new-in-page.component'
 import { OriginalsPageComponent } from './pages/originals-page/originals-page.component'
 import { ProductsRoutingModule } from './products-routing.module'
 import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.component'
-import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { PrimeNgModule } from '../prime-ng/prime-ng.module'
 import { FooterComponent } from './components/footer/footer.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './components/footer/footer.component'
     AccessoriesPageComponent,
     FooterComponent,
   ],
-  imports: [CommonModule, ProductsRoutingModule, PrimeNgModule],
+
+  imports: [CommonModule, ProductsRoutingModule, PrimeNgModule, FormsModule],
   exports: [ProductsRoutingModule],
 })
 export class ProductsModule {}
