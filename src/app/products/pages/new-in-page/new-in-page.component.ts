@@ -23,6 +23,13 @@ export class NewInPageComponent {
         'assets/newIn/id-0/newIn-carrusel-2.jpg',
         'assets/newIn/id-0/newIn-carrusel-3.jpg',
       ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '280 g/m², 80% algodón ring-spun y peinado, 20% poliéster',
+        'Tejido de 3 capas',
+        'Sisas, puños y bajo con tapa costura',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 1,
@@ -35,6 +42,13 @@ export class NewInPageComponent {
         'assets/newIn/id-1/newIn-carrusel-2.jpg',
         'assets/newIn/id-1/newIn-carrusel-3.jpg',
         'assets/newIn/id-1/newIn-carrusel-4.jpg',
+      ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '280 g/m², 80% algodón ring-spun y peinado, 20% poliéster',
+        'Tejido de 3 capas',
+        'Sisas, puños y bajo con tapa costura',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
     {
@@ -49,6 +63,13 @@ export class NewInPageComponent {
         'assets/newIn/id-2/newIn-carrusel-3.jpg',
         'assets/newIn/id-2/newIn-carrusel-4.jpg',
       ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '280 g/m², 80% algodón ring-spun y peinado, 20% poliéster',
+        'Tejido de 3 capas',
+        'Sisas, puños y bajo con tapa costura',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 3,
@@ -61,6 +82,13 @@ export class NewInPageComponent {
         'assets/newIn/id-3/newIn-carrusel-2.jpg',
         'assets/newIn/id-3/newIn-carrusel-3.jpg',
         'assets/newIn/id-3/newIn-carrusel-4.jpg',
+      ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '280 g/m², 80% algodón ring-spun y peinado, 20% poliéster',
+        'Tejido de 3 capas',
+        'Sisas, puños y bajo con tapa costura',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
   ]

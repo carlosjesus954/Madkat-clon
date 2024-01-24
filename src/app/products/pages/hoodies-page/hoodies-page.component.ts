@@ -24,6 +24,12 @@ export class HoodiesPageComponent {
         'assets/hoodies/id-0/hoodies-carrusel-3.jpg',
         'assets/hoodies/id-0/hoodies-carrusel-4.jpg',
       ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '460 g/m, 100% algodón loopback terry',
+        'Bolsillo canguro',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 1,
@@ -38,6 +44,12 @@ export class HoodiesPageComponent {
         'assets/hoodies/id-1/hoodies-carrusel-2.jpg',
         'assets/hoodies/id-1/hoodies-carrusel-3.jpg',
         'assets/hoodies/id-1/hoodies-carrusel-4.jpg',
+      ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '460 g/m, 100% algodón loopback terry',
+        'Bolsillo canguro',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
     {
@@ -54,6 +66,12 @@ export class HoodiesPageComponent {
         'assets/hoodies/id-2/hoodies-carrusel-3.jpg',
         'assets/hoodies/id-2/hoodies-carrusel-4.jpg',
       ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '460 g/m, 100% algodón loopback terry',
+        'Bolsillo canguro',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 3,
@@ -68,6 +86,12 @@ export class HoodiesPageComponent {
         'assets/hoodies/id-3/hoodies-carrusel-2.jpg',
         'assets/hoodies/id-3/hoodies-carrusel-3.jpg',
         'assets/hoodies/id-3/hoodies-carrusel-4.jpg',
+      ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '460 g/m, 100% algodón loopback terry',
+        'Bolsillo canguro',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
   ]

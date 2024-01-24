@@ -8,4 +8,6 @@ export interface Product {
   imgs: string[]
   src?: string
   talla?: string
+  details?: string[]
+  comment?: string
 }

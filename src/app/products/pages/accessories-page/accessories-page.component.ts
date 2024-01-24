@@ -26,6 +26,13 @@ export class AccessoriesPageComponent {
         'assets/accesories/id-0/a-c-5.png',
         'assets/accesories/id-0/a-c-6.png',
       ],
+      comment: 'Detalles del producto',
+      details: [
+        '76% Algodón, 20% Polyester and 4% Espandex',
+        '3 pares de calcetines de estilo atlético',
+        'Talla única',
+        'Este producto no admite devolución',
+      ],
     },
     {
       id: 1,
@@ -39,6 +46,14 @@ export class AccessoriesPageComponent {
         'assets/accesories/id-1/a-c-1.png',
         'assets/accesories/id-1/a-c-2.png',
         'assets/accesories/id-1/a-c-3.jpg',
+      ],
+      comment: 'Detalles del producto',
+      details: [
+        '50% poliacrílico reciclado/ 50% poliacrílico',
+        'Hilo duradero y de alta calidad',
+        'Logo bordado',
+        'Gorro con bordes doblados.',
+        'Doble grosor.',
       ],
     },
     {
@@ -56,6 +71,11 @@ export class AccessoriesPageComponent {
         'assets/accesories/id-2/a-c-4.jpg',
         'assets/accesories/id-2/a-c-5.jpg',
       ],
+      comment: 'Detalles del producto',
+      details: [
+        'Drift MADKAT XL es una alfombrilla extra grande',
+        'Materiales premium',
+      ],
     },
     {
       id: 3,
@@ -70,6 +90,13 @@ export class AccessoriesPageComponent {
         'assets/accesories/id-3/a-c-2.png',
         'assets/accesories/id-3/a-c-3.jpg',
         'assets/accesories/id-3/a-c-4.jpg',
+      ],
+      comment: 'Detalles del producto',
+      details: [
+        'Producto oficial Rubius',
+        'Mecanismo Frog',
+        'Materiales de alta calidad',
+        'Acabados en ante y PU premium',
       ],
     },
   ]

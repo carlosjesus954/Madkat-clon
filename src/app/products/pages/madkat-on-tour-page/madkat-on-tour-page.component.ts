@@ -24,6 +24,13 @@ export class MadkatOnTourPageComponent {
         'assets/madkatOnTour/id-0/madkat-carrusel-3.jpg',
         'assets/madkatOnTour/id-0/madkat-carrusel-4.jpg',
       ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '100% Algodón orgánico',
+        'Manga con dobladillo',
+        'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 1,
@@ -38,6 +45,13 @@ export class MadkatOnTourPageComponent {
         'assets/madkatOnTour/id-1/madkat-carrusel-2.jpg',
         'assets/madkatOnTour/id-1/madkat-carrusel-3.jpg',
         'assets/madkatOnTour/id-1/madkat-carrusel-4.jpg',
+      ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '100% Algodón orgánico',
+        'Manga con dobladillo',
+        'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
     {
@@ -54,6 +68,13 @@ export class MadkatOnTourPageComponent {
         'assets/madkatOnTour/id-2/madkat-carrusel-3.jpg',
         'assets/madkatOnTour/id-2/madkat-carrusel-4.jpg',
       ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '100% Algodón orgánico',
+        'Manga con dobladillo',
+        'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 3,
@@ -68,6 +89,13 @@ export class MadkatOnTourPageComponent {
         'assets/madkatOnTour/id-3/madkat-carrusel-2.jpg',
         'assets/madkatOnTour/id-3/madkat-carrusel-3.jpg',
         'assets/madkatOnTour/id-3/madkat-carrusel-4.jpg',
+      ],
+      comment: 'Natalia mide 1,68 cm y lleva una talla XL',
+      details: [
+        '100% Algodón orgánico',
+        'Manga con dobladillo',
+        'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
   ]

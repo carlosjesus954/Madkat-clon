@@ -33,9 +33,10 @@
       ></button>
       <p-divider></p-divider>
       <span class="container__detalle">Texto</span>
-      <ul>
-        <li>texto</li>
-        <li>text</li>
+      <ul class="container__ul">
+        <li *ngFor="let detail of productoSeleccionado" class="container__li">
+          {{ detail.details }}
+        </li>
       </ul>
     </div>
   </div>

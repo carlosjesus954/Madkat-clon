@@ -23,6 +23,14 @@ export class OriginalsPageComponent {
         'assets/originals/id-0/originals-carrusel-2.jpg',
         'assets/originals/id-0/originals-carrusel-3.jpg',
       ],
+      comment: 'Isabella mide 1,55 cm y lleva una talla XL',
+      details: [
+        '185 g/m',
+        '100% Algodón',
+        'Cuello canalé',
+        'Doble costura en puños y dobladillo inferior',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 1,
@@ -36,6 +44,14 @@ export class OriginalsPageComponent {
         'assets/originals/id-1/originals-carrusel-1.jpg',
         'assets/originals/id-1/originals-carrusel-2.jpg',
         'assets/originals/id-1/originals-carrusel-3.jpg',
+      ],
+      comment: 'Isabella mide 1,55 cm y lleva una talla XL',
+      details: [
+        '185 g/m',
+        '100% Algodón',
+        'Cuello canalé',
+        'Doble costura en puños y dobladillo inferior',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
     {
@@ -51,6 +67,14 @@ export class OriginalsPageComponent {
         'assets/originals/id-2/originals-carrusel-2.jpg',
         'assets/originals/id-2/originals-carrusel-3.jpg',
       ],
+      comment: 'Isabella mide 1,55 cm y lleva una talla XL',
+      details: [
+        '185 g/m',
+        '100% Algodón',
+        'Cuello canalé',
+        'Doble costura en puños y dobladillo inferior',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 3,
@@ -64,6 +88,14 @@ export class OriginalsPageComponent {
         'assets/originals/id-3/originals-carrusel-1.jpg',
         'assets/originals/id-3/originals-carrusel-2.jpg',
         'assets/originals/id-3/originals-carrusel-3.jpg',
+      ],
+      comment: 'Isabella mide 1,55 cm y lleva una talla XL',
+      details: [
+        '185 g/m',
+        '100% Algodón',
+        'Cuello canalé',
+        'Doble costura en puños y dobladillo inferior',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
   ]

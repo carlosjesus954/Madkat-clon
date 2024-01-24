@@ -25,6 +25,13 @@ export class TShirtsPageComponent {
         'assets/tShirts/id-0/tshirts-carrusel-3.jpg',
         'assets/tShirts/id-0/tshirts-carrusel-4.jpg',
       ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '240 g/m',
+        '100% algodón',
+        'Corte "Relaxed Fit"',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 1,
@@ -39,6 +46,13 @@ export class TShirtsPageComponent {
         'assets/tShirts/id-1/tshirts-carrusel-2.jpg',
         'assets/tShirts/id-1/tshirts-carrusel-3.jpg',
         'assets/tShirts/id-1/tshirts-carrusel-4.jpg',
+      ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '240 g/m',
+        '100% algodón',
+        'Corte "Relaxed Fit"',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
     {
@@ -55,6 +69,13 @@ export class TShirtsPageComponent {
         'assets/tShirts/id-2/tshirts-carrusel-3.jpg',
         'assets/tShirts/id-2/tshirts-carrusel-4.jpg',
       ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '240 g/m',
+        '100% algodón',
+        'Corte "Relaxed Fit"',
+        'Guía de tallas y recomendaciones de cuidado',
+      ],
     },
     {
       id: 3,
@@ -69,6 +90,13 @@ export class TShirtsPageComponent {
         'assets/tShirts/id-3/tshirts-carrusel-2.jpg',
         'assets/tShirts/id-3/tshirts-carrusel-3.jpg',
         'assets/tShirts/id-3/tshirts-carrusel-4.jpg',
+      ],
+      comment: 'Eduardo mide 1,78 cm y lleva una talla XL',
+      details: [
+        '240 g/m',
+        '100% algodón',
+        'Corte "Relaxed Fit"',
+        'Guía de tallas y recomendaciones de cuidado',
       ],
     },
   ]
