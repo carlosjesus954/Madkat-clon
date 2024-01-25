@@ -33,6 +33,7 @@ export class AccessoriesPageComponent {
         'Talla única',
         'Este producto no admite devolución',
       ],
+      cantidad: 0,
     },
     {
       id: 1,
@@ -55,6 +56,7 @@ export class AccessoriesPageComponent {
         'Gorro con bordes doblados.',
         'Doble grosor.',
       ],
+      cantidad: 0,
     },
     {
       id: 2,
@@ -76,6 +78,7 @@ export class AccessoriesPageComponent {
         'Drift MADKAT XL es una alfombrilla extra grande',
         'Materiales premium',
       ],
+      cantidad: 0,
     },
     {
       id: 3,
@@ -98,6 +101,7 @@ export class AccessoriesPageComponent {
         'Materiales de alta calidad',
         'Acabados en ante y PU premium',
       ],
+      cantidad: 0,
     },
   ]
   constructor(

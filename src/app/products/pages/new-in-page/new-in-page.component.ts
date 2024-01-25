@@ -30,6 +30,7 @@ export class NewInPageComponent {
         'Sisas, puños y bajo con tapa costura',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 1,
@@ -50,6 +51,7 @@ export class NewInPageComponent {
         'Sisas, puños y bajo con tapa costura',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 2,
@@ -70,6 +72,7 @@ export class NewInPageComponent {
         'Sisas, puños y bajo con tapa costura',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 3,
@@ -90,6 +93,7 @@ export class NewInPageComponent {
         'Sisas, puños y bajo con tapa costura',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
   ]
   constructor(

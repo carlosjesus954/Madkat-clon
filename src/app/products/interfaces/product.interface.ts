@@ -10,4 +10,5 @@ export interface Product {
   talla?: string
   details?: string[]
   comment?: string
+  cantidad: number
 }

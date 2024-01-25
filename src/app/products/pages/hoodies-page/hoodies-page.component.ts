@@ -30,6 +30,7 @@ export class HoodiesPageComponent {
         'Bolsillo canguro',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 1,
@@ -51,6 +52,7 @@ export class HoodiesPageComponent {
         'Bolsillo canguro',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 2,
@@ -72,6 +74,7 @@ export class HoodiesPageComponent {
         'Bolsillo canguro',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 3,
@@ -93,6 +96,7 @@ export class HoodiesPageComponent {
         'Bolsillo canguro',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
   ]
   constructor(

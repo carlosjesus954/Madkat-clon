@@ -1,17 +1,20 @@
-<div class="carrito">
+<div class="carrito" *ngIf="carrito.length > 0">
   <span class="carrito__span">Su carrito</span>
-  <div class="carrito__container">
-    <img src="" alt="" />
-    <div>
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="carrito__container" *ngFor="let product of carrito">
+    <img [src]="product.src" [alt]="product.title" />
+    <div class="carritos__subcontainer">
+      <span> {{ product.title }} {{ product.talla }} </span>
+      <span> cantidad: {{ product.cantidad }} </span>
     </div>
     <div>
-      <i class="pi pi-times"></i>
-      <span> </span>
+      <i class="pi pi-times" (click)="deleteProduct(product)"></i>
+      <span> {{ product.precio }} </span>
     </div>
   </div>
   <p-divider></p-divider>
-  <div><span></span><span></span><span></span></div>
+  <div>
+    <span class="carrito__price--total">subtotal</span>
+    <span class="carrito__price--total">impuesto(21%)</span>
+    <span class="carrito__price--total">total</span>
+  </div>
 </div>

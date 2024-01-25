@@ -31,6 +31,7 @@ export class MadkatOnTourPageComponent {
         'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 1,
@@ -53,6 +54,7 @@ export class MadkatOnTourPageComponent {
         'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 2,
@@ -75,6 +77,7 @@ export class MadkatOnTourPageComponent {
         'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
     {
       id: 3,
@@ -97,6 +100,7 @@ export class MadkatOnTourPageComponent {
         'Dobladillo de la manga y dobladillo inferior con pespunte ancho de doble aguja',
         'Guía de tallas y recomendaciones de cuidado',
       ],
+      cantidad: 0,
     },
   ]
   constructor(

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Product } from '../../interfaces/product.interface'
+import { ProductsService } from '../../services/products.service'
 
 @Component({
   selector: 'app-carrito',
@@ -8,6 +9,13 @@ import { Product } from '../../interfaces/product.interface'
 })
 export class CarritoComponent implements OnInit {
   public carrito: Product[] = []
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(private productService: ProductsService) {}
+  ngOnInit(): void {
+    this.productService.carritoActual$.subscribe(product => {
+      this.carrito = product
+    })
+  }
+  public deleteProduct(product: Product) {
+    this.productService.deleteProductoCarrito(product)
+  }
 }
