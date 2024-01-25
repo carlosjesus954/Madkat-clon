@@ -14,7 +14,7 @@ export class ColeccionesPageComponent implements OnInit {
   public tallaSeleccionada: string = 'l'
 
   constructor(
-    private productService: ProductsService,
+    public productService: ProductsService,
     private router: Router,
   ) {}
   public tallasDisponibles: string[] = ['s', 'm', 'l', 'xl', 'xxl']
@@ -34,6 +34,7 @@ export class ColeccionesPageComponent implements OnInit {
     console.log('COLECCIONES AÑADIR CESTA', producto)
     if (producto) {
       this.productService.actualizarCarrito(producto, this.tallaSeleccionada)
+      this.productService.changeCarritoState()
     }
   }
 }

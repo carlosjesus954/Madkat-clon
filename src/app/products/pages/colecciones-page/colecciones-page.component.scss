@@ -59,12 +59,16 @@
 }
 .carrito__fixed {
   position: fixed;
-  right: 0;
+  right: -100%;
   top: 0;
   z-index: 10;
   background-color: red;
   height: 100vh;
   width: 100%;
   max-width: 20rem;
+  transition: all 0.5s ease-in-out;
   // display: none;
+}
+.carrito__show {
+  right: 0;
 }

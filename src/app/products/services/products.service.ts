@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { BehaviorSubject, pipe, tap } from 'rxjs'
+import { BehaviorSubject } from 'rxjs'
 import { Product } from '../interfaces/product.interface'
 
 @Injectable({
@@ -10,6 +10,9 @@ export class ProductsService {
   productoSeleccionado$ = this.productoSeleccionado.asObservable()
   private carritoState = new BehaviorSubject<Product[]>([]) // Inicializa el carrito como un array vacío
   carritoActual$ = this.carritoState.asObservable()
+
+  public carritoShow = new BehaviorSubject<boolean>(false)
+  carritoActivated$ = this.carritoShow.asObservable()
 
   constructor() {
     const storedCart = JSON.parse(localStorage.getItem('carrito') || '[]')
@@ -44,10 +47,14 @@ export class ProductsService {
       return !(
         product.id === producto.id &&
         product.title === producto.title &&
-        product.coleccion === producto.coleccion
+        product.coleccion === producto.coleccion &&
+        product.talla === producto.talla
       )
     })
     this.carritoState.next(carritoActual)
     localStorage.setItem('carrito', JSON.stringify(carritoActual))
+  }
+  public changeCarritoState() {
+    this.carritoShow.next(!this.carritoShow.value)
   }
 }
