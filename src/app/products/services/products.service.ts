@@ -28,17 +28,29 @@ export class ProductsService {
     localStorage.setItem('productoSeleccionado', JSON.stringify(producto))
   }
 
-  public actualizarCarrito(productos: Product, talla?: string) {
-    const productoAñadido = { ...productos }
-    productoAñadido.talla = talla
-    productoAñadido.cantidad = 1
-    productoAñadido.precio = productoAñadido.precio * productoAñadido.cantidad // Recalcular el precio
-
+  public actualizarCarrito(producto: Product, talla?: string) {
     let currentCart = this.carritoState.value
-    currentCart.push(productoAñadido) // Añadir el nuevo producto al carrito
-    this.carritoState.next(currentCart) // Actualizar el estado del carrito
-    console.log('SERVICIO CARRITO', this.carritoState.value)
+    const productoExistenteIndex = currentCart.findIndex(
+      item =>
+        item.id === producto.id &&
+        item.title === producto.title &&
+        item.coleccion === producto.coleccion &&
+        item.talla === talla,
+    )
 
+    if (productoExistenteIndex !== -1) {
+      // Si el producto ya existe en el carrito, aumentar su cantidad
+      currentCart[productoExistenteIndex].cantidad += 1
+    } else {
+      // Si el producto no existe en el carrito, agregarlo
+      const productoAñadido = { ...producto }
+      productoAñadido.talla = talla
+      productoAñadido.cantidad = 1 // Establecer cantidad en 1 si no está definida
+      productoAñadido.precio = productoAñadido.precio * productoAñadido.cantidad // Recalcular el precio
+      currentCart.push(productoAñadido)
+    }
+
+    this.carritoState.next(currentCart) // Actualizar el estado del carrito
     localStorage.setItem('carrito', JSON.stringify(currentCart))
   }
   public deleteProductoCarrito(producto: Product) {
