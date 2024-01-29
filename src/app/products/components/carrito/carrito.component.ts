@@ -10,6 +10,7 @@ import { ProductsService } from '../../services/products.service'
 export class CarritoComponent implements OnInit {
   public carrito: Product[] = []
   constructor(private productService: ProductsService) {}
+
   ngOnInit(): void {
     this.productService.carritoActual$.subscribe(product => {
       this.carrito = product
@@ -17,5 +18,11 @@ export class CarritoComponent implements OnInit {
   }
   public deleteProduct(product: Product) {
     this.productService.deleteProductoCarrito(product)
+  }
+  public chageCarritoStatus() {
+    this.productService.changeCarritoState()
+  }
+  isNotLast(index: number): boolean {
+    return index < this.carrito.length - 1
   }
 }

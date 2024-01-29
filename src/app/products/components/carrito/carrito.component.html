@@ -1,18 +1,39 @@
-<div class="carrito" *ngIf="carrito.length > 0">
-  <span class="carrito__span">Su carrito</span>
-  <div class="carrito__container" *ngFor="let product of carrito">
-    <img [src]="product.src" [alt]="product.title" />
-    <div class="carritos__subcontainer">
-      <span> {{ product.title }} {{ product.talla }} </span>
-      <span> cantidad: {{ product.cantidad }} </span>
-    </div>
-    <div>
-      <i class="pi pi-times" (click)="deleteProduct(product)"></i>
-      <span> {{ product.precio }} </span>
-    </div>
+<div class="carrito">
+  <div class="carrito__close--container">
+    <span class="carrito__span">Su carrito</span>
+    <i class="pi pi-times close--carrito" (click)="chageCarritoStatus()"></i>
   </div>
+
+  <ng-container *ngIf="carrito.length > 0">
+    <div
+      class="carrito__container"
+      *ngFor="let product of carrito; let i = index"
+      [ngClass]="isNotLast(i) ? 'carrito__border--separate' : ''"
+    >
+      <img [src]="product.imgs[0]" [alt]="product.title" class="carrito__img" />
+      <div class="carrito__subcontainer">
+        <span>
+          {{ product.title }}
+          <span *ngIf="product.coleccion !== 'accesories'">
+            {{ product.talla | uppercase }}
+          </span>
+        </span>
+        <span class="carrito__cantidad--coleccion">
+          Cantidad: {{ product.cantidad }}
+        </span>
+      </div>
+      <div class="carrito__delete--container">
+        <i
+          class="pi pi-times delete--icon"
+          (click)="deleteProduct(product)"
+        ></i>
+        <span class="carrito__precio--coleccion"> {{ product.precio }} </span>
+      </div>
+    </div>
+  </ng-container>
+
   <p-divider></p-divider>
-  <div>
+  <div class="carrito__prices">
     <span class="carrito__price--total">subtotal</span>
     <span class="carrito__price--total">impuesto(21%)</span>
     <span class="carrito__price--total">total</span>

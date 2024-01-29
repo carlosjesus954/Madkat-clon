@@ -13,7 +13,10 @@
     </h1>
     <span class="container__price">{{ product.precio }}€</span>
     <div class="container__talla">
-      <div class="container__tallas">
+      <div
+        class="container__tallas"
+        *ngIf="productoSeleccionado[0].coleccion !== 'accesories'"
+      >
         <button
           *ngFor="let b of tallasDisponibles"
           pButton
@@ -46,6 +49,7 @@
     </div>
   </div>
 </div>
+
 <div
   class="carrito__fixed"
   [ngClass]="{ carrito__show: productService.carritoShow.value }"
