@@ -11,4 +11,5 @@ export interface Product {
   details?: string[]
   comment?: string
   cantidad: number
+  precioTotal?: number
 }

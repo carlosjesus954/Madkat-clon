@@ -41,18 +41,23 @@ export class ProductsService {
     if (productoExistenteIndex !== -1) {
       // Si el producto ya existe en el carrito, aumentar su cantidad
       currentCart[productoExistenteIndex].cantidad += 1
+      currentCart[productoExistenteIndex].precioTotal =
+        currentCart[productoExistenteIndex].precio *
+        currentCart[productoExistenteIndex].cantidad
     } else {
       // Si el producto no existe en el carrito, agregarlo
       const productoAñadido = { ...producto }
       productoAñadido.talla = talla
       productoAñadido.cantidad = 1 // Establecer cantidad en 1 si no está definida
-      productoAñadido.precio = productoAñadido.precio * productoAñadido.cantidad // Recalcular el precio
+      productoAñadido.precioTotal =
+        productoAñadido.precio * productoAñadido.cantidad
       currentCart.push(productoAñadido)
     }
 
     this.carritoState.next(currentCart) // Actualizar el estado del carrito
     localStorage.setItem('carrito', JSON.stringify(currentCart))
   }
+
   public deleteProductoCarrito(producto: Product) {
     let carritoActual = this.carritoState.value
     carritoActual = carritoActual.filter(product => {
@@ -66,6 +71,7 @@ export class ProductsService {
     this.carritoState.next(carritoActual)
     localStorage.setItem('carrito', JSON.stringify(carritoActual))
   }
+
   public changeCarritoState() {
     this.carritoShow.next(!this.carritoShow.value)
   }

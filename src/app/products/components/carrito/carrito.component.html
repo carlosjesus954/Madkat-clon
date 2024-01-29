@@ -27,7 +27,9 @@
           class="pi pi-times delete--icon"
           (click)="deleteProduct(product)"
         ></i>
-        <span class="carrito__precio--coleccion"> {{ product.precio }}€ </span>
+        <span class="carrito__precio--coleccion">
+          {{ product.precioTotal }}€
+        </span>
       </div>
     </div>
   </ng-container>
