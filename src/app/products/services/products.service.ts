@@ -10,7 +10,8 @@ export class ProductsService {
   productoSeleccionado$ = this.productoSeleccionado.asObservable()
   private carritoState = new BehaviorSubject<Product[]>([]) // Inicializa el carrito como un array vacío
   carritoActual$ = this.carritoState.asObservable()
-
+  public precioTotalCarrito = new BehaviorSubject<number>(0)
+  precioTotal$ = this.precioTotalCarrito.asObservable()
   public carritoShow = new BehaviorSubject<boolean>(false)
   carritoActivated$ = this.carritoShow.asObservable()
 
@@ -69,10 +70,21 @@ export class ProductsService {
       )
     })
     this.carritoState.next(carritoActual)
+
     localStorage.setItem('carrito', JSON.stringify(carritoActual))
   }
 
   public changeCarritoState() {
     this.carritoShow.next(!this.carritoShow.value)
+  }
+
+  public calculosCarrito(carrito: Product[]) {
+    let total: number = 0
+    carrito.forEach(producto => {
+      if (producto.precioTotal !== undefined) {
+        total += producto.precioTotal
+      }
+    })
+    this.precioTotalCarrito.next(total)
   }
 }

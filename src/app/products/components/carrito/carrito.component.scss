@@ -27,9 +27,18 @@
     align-items: start;
     gap: 2rem;
   }
-  &__price--tota {
+  &__price--total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   &__prices {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    justify-content: start;
+    align-items: safe;
   }
   &__close--container {
     display: flex;

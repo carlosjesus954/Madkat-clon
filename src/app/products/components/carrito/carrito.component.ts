@@ -9,11 +9,16 @@ import { ProductsService } from '../../services/products.service'
 })
 export class CarritoComponent implements OnInit {
   public carrito: Product[] = []
+  public precioTotal: number = 0
   constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
     this.productService.carritoActual$.subscribe(product => {
       this.carrito = product
+      this.productService.calculosCarrito(this.carrito)
+    })
+    this.productService.precioTotal$.subscribe(price => {
+      this.precioTotal = price
     })
   }
   public deleteProduct(product: Product) {
