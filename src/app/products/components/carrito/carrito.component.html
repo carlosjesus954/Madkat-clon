@@ -36,10 +36,14 @@
 
   <p-divider></p-divider>
   <div class="carrito__prices">
-    <span class="carrito__price--total">subtotal <span>coco</span> </span>
-    <span class="carrito__price--total">impuesto(21%) <span>coco</span> </span>
     <span class="carrito__price--total"
-      >total <span>{{ precioTotal }}€</span>
+      >subtotal <span>{{ precioTotal?.subtotal | roundNumber }} €</span>
+    </span>
+    <span class="carrito__price--total"
+      >impuesto(21%) <span>{{ precioTotal?.inpuesto | roundNumber }} €</span>
+    </span>
+    <span class="carrito__price--total"
+      >total <span>{{ precioTotal?.total }}€</span>
     </span>
   </div>
 </div>

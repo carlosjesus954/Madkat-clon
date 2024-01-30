@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 import { Product } from '../interfaces/product.interface'
+import { Price } from '../interfaces/price.interface'
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,11 @@ export class ProductsService {
   productoSeleccionado$ = this.productoSeleccionado.asObservable()
   private carritoState = new BehaviorSubject<Product[]>([]) // Inicializa el carrito como un array vacío
   carritoActual$ = this.carritoState.asObservable()
-  public precioTotalCarrito = new BehaviorSubject<number>(0)
+  public precioTotalCarrito = new BehaviorSubject<Price>({
+    total: 0,
+    subtotal: 0,
+    inpuesto: 0,
+  })
   precioTotal$ = this.precioTotalCarrito.asObservable()
   public carritoShow = new BehaviorSubject<boolean>(false)
   carritoActivated$ = this.carritoShow.asObservable()
@@ -85,6 +90,9 @@ export class ProductsService {
         total += producto.precioTotal
       }
     })
-    this.precioTotalCarrito.next(total)
+    const inpuesto = total * 0.21
+    const subtotal = total - inpuesto
+    const price: Price = { total, inpuesto, subtotal }
+    this.precioTotalCarrito.next(price)
   }
 }

@@ -14,7 +14,8 @@ import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.compon
 import { PrimeNgModule } from '../prime-ng/prime-ng.module'
 import { FooterComponent } from './components/footer/footer.component'
 import { FormsModule } from '@angular/forms';
-import { CarritoComponent } from './components/carrito/carrito.component'
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { RoundNumberPipe } from './pipes/round-number.pipe'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CarritoComponent } from './components/carrito/carrito.component'
     AccessoriesPageComponent,
     FooterComponent,
     CarritoComponent,
+    RoundNumberPipe,
   ],
 
   imports: [CommonModule, ProductsRoutingModule, PrimeNgModule, FormsModule],

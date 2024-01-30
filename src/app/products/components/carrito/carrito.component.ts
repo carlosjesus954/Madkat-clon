@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { Product } from '../../interfaces/product.interface'
 import { ProductsService } from '../../services/products.service'
+import { Price } from '../../interfaces/price.interface'
 
 @Component({
   selector: 'app-carrito',
@@ -9,7 +10,8 @@ import { ProductsService } from '../../services/products.service'
 })
 export class CarritoComponent implements OnInit {
   public carrito: Product[] = []
-  public precioTotal: number = 0
+  public precioTotal: Price | null = null
+
   constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
@@ -18,7 +20,11 @@ export class CarritoComponent implements OnInit {
       this.productService.calculosCarrito(this.carrito)
     })
     this.productService.precioTotal$.subscribe(price => {
-      this.precioTotal = price
+      if (typeof price === 'number') {
+        console.error('Error: El precio total no es de tipo Price.')
+      } else {
+        this.precioTotal = price
+      }
     })
   }
   public deleteProduct(product: Product) {
