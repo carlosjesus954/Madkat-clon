@@ -10,6 +10,9 @@
     justify-content: space-between;
     padding: 1rem;
   }
+  &__icons--navigate {
+    cursor: pointer;
+  }
   &__container {
     display: flex;
     align-items: center;
