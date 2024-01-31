@@ -1,0 +1,28 @@
+<div class="login">
+  <span class="login__span">Login</span>
+  <form class="login__form">
+    <span class="p-float-label">
+      <input id="email" type="email" pInputText class="login__inputs" />
+      <label htmlFor="email">Email</label>
+    </span>
+    <span class="p-float-label">
+      <input type="password" pInputText class="login__inputs" />
+      <label htmlFor="password">contraseña</label>
+    </span>
+
+    <span class="login__forgot">¿Olvidaste tu contraseña?</span>
+    <button pButton class="p-button-secondary login__button">
+      {{ submitText }}
+    </button>
+  </form>
+  <p-divider class="login__divider"></p-divider>
+  <div class="login__subcontainer">
+    <span class="login__span--register">¿No tienes una cuenta?</span>
+    <button
+      pButton
+      routerLink="register"
+      label="Crear una cuenta"
+      class="p-button-help login__button--register"
+    ></button>
+  </div>
+</div>

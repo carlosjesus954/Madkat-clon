@@ -48,6 +48,11 @@ const routes: Routes = [
         component: ColeccionesPageComponent,
       },
       {
+        path: 'login',
+        loadChildren: () =>
+          import('../auth/auth.module').then(m => m.AuthModule),
+      },
+      {
         path: '**',
         redirectTo: 'catalagoPage',
       },

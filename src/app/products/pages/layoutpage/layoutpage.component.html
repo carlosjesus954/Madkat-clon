@@ -35,16 +35,14 @@
         <li
           class="header__li"
           *ngFor="let i of itemsNav"
-          [routerLink]="i.router"
-          (click)="ocultarMenu()"
+          (click)="ocultarMenu(i.router)"
         >
           {{ i.title | uppercase }}
         </li>
         <li
           class="header__li--strong"
           *ngFor="let i of itemsNavAuth"
-          [routerLink]="i.router"
-          (click)="ocultarMenu()"
+          (click)="ocultarMenu(i.router)"
         >
           {{ i.title }}
         </li>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Router } from '@angular/router'
 import { BehaviorSubject, Observable } from 'rxjs'
 
 @Component({
@@ -9,7 +10,7 @@ import { BehaviorSubject, Observable } from 'rxjs'
 export class LayoutpageComponent {
   private menuVisible = new BehaviorSubject<boolean>(false)
   public menuVisible$: Observable<boolean> = this.menuVisible.asObservable()
-
+  constructor(private route: Router) {}
   public titleHome = 'Home'
   public itemsNav = [
     {
@@ -52,19 +53,22 @@ export class LayoutpageComponent {
     {
       id: 1,
       title: 'Login',
-      router: '',
+      router: 'login',
     },
     {
       id: 2,
       title: 'Registrarse',
-      router: '',
+      router: 'register',
     },
   ]
 
   public mostrarMenu() {
     this.menuVisible.next(true)
   }
-  public ocultarMenu() {
+  public ocultarMenu(ruta?: string) {
     this.menuVisible.next(false)
+    if (ruta) {
+      this.route.navigateByUrl(`${ruta}`)
+    }
   }
 }

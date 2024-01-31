@@ -1,0 +1,47 @@
+<div class="login">
+  <span class="login__span">Registrarse</span>
+  <form class="login__form">
+    <span class="p-float-label">
+      <input id="name" type="text" pInputText class="login__inputs" />
+      <label htmlFor="name">Nombre</label>
+    </span>
+    <span class="p-float-label">
+      <input id="apellidos" type="text" pInputText class="login__inputs" />
+      <label htmlFor="apellidos">Apellidos</label>
+    </span>
+    <span class="p-float-label">
+      <input id="email" type="email" pInputText class="login__inputs" />
+      <label htmlFor="email">Email</label>
+    </span>
+    <span class="p-float-label">
+      <input type="password" pInputText class="login__inputs" />
+      <label htmlFor="password">contraseña</label>
+    </span>
+
+    <div class="login__container">
+      <p-checkbox
+        formControlName="city"
+        value="New York"
+        inputId="terminosyprivacidad"
+      ></p-checkbox>
+      <label class="login__label" for="terminosyprivacidad"
+        >He leido y acepto los
+        <span class="login__label--destacado">Términos del servicio</span> y
+        <span class="login__label--destacado">Política de privacidad</span>
+      </label>
+    </div>
+    <button pButton class="p-button-help login__button">
+      {{ submitText }}
+    </button>
+  </form>
+  <p-divider class="login__divider"></p-divider>
+  <div class="login__subcontainer">
+    <span class="login__span--register">¿ya tienes cuenta?</span>
+    <button
+      pButton
+      (click)="goToLogin()"
+      label="Login"
+      class="p-button-secondary login__button--register"
+    ></button>
+  </div>
+</div>
