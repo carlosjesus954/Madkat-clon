@@ -11,6 +11,12 @@
       />
       <label htmlFor="email">Email</label>
     </span>
+    <span
+      class="login__errors"
+      *ngIf="form.controls.email.invalid && form.controls.email.touched"
+    >
+      El email no es válido
+    </span>
     <span class="p-float-label">
       <input
         type="password"
@@ -20,6 +26,12 @@
         class="login__inputs"
       />
       <label htmlFor="password">contraseña</label>
+    </span>
+    <span
+      class="login__errors"
+      *ngIf="form.controls.password.invalid && form.controls.password.touched"
+    >
+      La contraseña es obligatoria y es necesario mínimo 6 carácteres
     </span>
 
     <span class="login__forgot">¿Olvidaste tu contraseña?</span>

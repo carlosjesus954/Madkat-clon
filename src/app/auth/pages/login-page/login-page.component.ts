@@ -15,4 +15,11 @@ export class LoginPageComponent {
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
   })
+
+  public submitForm() {
+    console.log(this.form)
+    if (this.form.valid) {
+      console.log('ha entrado')
+    }
+  }
 }

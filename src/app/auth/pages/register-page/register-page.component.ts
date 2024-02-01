@@ -27,7 +27,6 @@ export class RegisterPageComponent {
     checkBox: ['', [Validators.required]],
   })
   public submitForm() {
-    console.log('no entra cojone')
     console.log(this.form)
     if (this.form.valid) {
       console.log('ha entrado')
