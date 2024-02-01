@@ -1,27 +1,74 @@
 <div class="login">
   <span class="login__span">Registrarse</span>
-  <form class="login__form">
+  <form class="login__form" (ngSubmit)="submitForm()" [formGroup]="form">
     <span class="p-float-label">
-      <input id="name" type="text" pInputText class="login__inputs" />
+      <input
+        id="name"
+        type="text"
+        pInputText
+        class="login__inputs"
+        formControlName="name"
+      />
       <label htmlFor="name">Nombre</label>
     </span>
+    <span
+      class="login__errors"
+      *ngIf="form.controls.name.invalid && form.controls.name.touched"
+    >
+      El nombre {{ this.form.controls.name.value }} no es válido
+    </span>
     <span class="p-float-label">
-      <input id="apellidos" type="text" pInputText class="login__inputs" />
+      <input
+        id="apellidos"
+        type="text"
+        pInputText
+        class="login__inputs"
+        formControlName="apellidos"
+      />
       <label htmlFor="apellidos">Apellidos</label>
     </span>
-    <span class="p-float-label">
-      <input id="email" type="email" pInputText class="login__inputs" />
-      <label htmlFor="email">Email</label>
+    <span
+      class="login__errors"
+      *ngIf="form.controls.name.invalid && form.controls.name.touched"
+    >
+      El apellido {{ this.form.controls.apellidos.value }} no es válido
     </span>
     <span class="p-float-label">
-      <input type="password" pInputText class="login__inputs" />
+      <input
+        id="email"
+        type="email"
+        pInputText
+        class="login__inputs"
+        formControlName="email"
+      />
+      <label htmlFor="email">Email</label>
+    </span>
+    <span
+      class="login__errors"
+      *ngIf="form.controls.apellidos.invalid && form.controls.apellidos.touched"
+    >
+      El email no es válido
+    </span>
+    <span class="p-float-label">
+      <input
+        type="password"
+        pInputText
+        class="login__inputs"
+        formControlName="password"
+      />
       <label htmlFor="password">contraseña</label>
+    </span>
+    <span
+      class="login__errors"
+      *ngIf="form.controls.password.invalid && form.controls.password.touched"
+    >
+      La contraseña es obligatoria y es necesario mínimo 6 carácteres
     </span>
 
     <div class="login__container">
       <p-checkbox
-        formControlName="city"
-        value="New York"
+        formControlName="checkBox"
+        value="terminosyprivacidad"
         inputId="terminosyprivacidad"
       ></p-checkbox>
       <label class="login__label" for="terminosyprivacidad"
@@ -30,7 +77,13 @@
         <span class="login__label--destacado">Política de privacidad</span>
       </label>
     </div>
-    <button pButton class="p-button-help login__button">
+    <span
+      class="login__errors"
+      *ngIf="form.controls.checkBox.invalid && form.controls.checkBox.touched"
+    >
+      Es necesario activar el checkbox
+    </span>
+    <button pButton class="p-button-help login__button" type="submit">
       {{ submitText }}
     </button>
   </form>

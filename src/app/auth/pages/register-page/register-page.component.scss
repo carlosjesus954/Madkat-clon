@@ -66,6 +66,11 @@
   &__label--destacado {
     font-weight: bold;
   }
+  &__errors {
+    font-size: 0.8rem;
+    color: red;
+    font-weight: lighter;
+  }
 }
 .p-password-panel {
   width: 100%;

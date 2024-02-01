@@ -1,17 +1,33 @@
 <div class="login">
   <span class="login__span">Login</span>
-  <form class="login__form">
+  <form class="login__form" [formGroup]="form">
     <span class="p-float-label">
-      <input id="email" type="email" pInputText class="login__inputs" />
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        pInputText
+        class="login__inputs"
+      />
       <label htmlFor="email">Email</label>
     </span>
     <span class="p-float-label">
-      <input type="password" pInputText class="login__inputs" />
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Mínimo 6 caracteres"
+        pInputText
+        class="login__inputs"
+      />
       <label htmlFor="password">contraseña</label>
     </span>
 
     <span class="login__forgot">¿Olvidaste tu contraseña?</span>
-    <button pButton class="p-button-secondary login__button">
+    <button
+      pButton
+      [disabled]="!form.valid"
+      class="p-button-secondary login__button"
+    >
       {{ submitText }}
     </button>
   </form>
