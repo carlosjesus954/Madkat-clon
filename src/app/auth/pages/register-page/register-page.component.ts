@@ -2,6 +2,7 @@ import { Location } from '@angular/common'
 import { Component } from '@angular/core'
 import { FormBuilder, Validators } from '@angular/forms'
 import { AuthService } from '../../services/auth.service'
+import { TokenUsuario } from '../../interfaces/token-usuario'
 
 @Component({
   selector: 'app-register-page',
@@ -30,6 +31,14 @@ export class RegisterPageComponent {
     console.log(this.form)
     if (this.form.valid) {
       console.log('ha entrado')
+      const formulario = this.form.value
+      const safeFormulario: TokenUsuario = {
+        name: formulario.name || '',
+        apellidos: formulario.apellidos || '',
+        email: formulario.email || '',
+        password: formulario.password || '',
+      }
+      this.authService.register(safeFormulario)
     }
   }
 }

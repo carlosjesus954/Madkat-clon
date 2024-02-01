@@ -1,6 +1,6 @@
 <div class="login">
   <span class="login__span">Login</span>
-  <form class="login__form" [formGroup]="form">
+  <form class="login__form" [formGroup]="form" (ngSubmit)="submitForm()">
     <span class="p-float-label">
       <input
         id="email"
@@ -39,6 +39,7 @@
       pButton
       [disabled]="!form.valid"
       class="p-button-secondary login__button"
+      type="submit"
     >
       {{ submitText }}
     </button>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
+import { AuthService } from '../../services/auth.service'
+import { TokenUsuario } from '../../interfaces/token-usuario'
 
 @Component({
   selector: 'app-login-page',
@@ -9,7 +11,10 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class LoginPageComponent {
   public submitText: string = 'Login'
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+  ) {}
 
   public form = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
@@ -20,6 +25,12 @@ export class LoginPageComponent {
     console.log(this.form)
     if (this.form.valid) {
       console.log('ha entrado')
+      const paramsLogin = this.form.value
+      const safeLogin: TokenUsuario = {
+        email: paramsLogin.email || '',
+        password: paramsLogin.password || '',
+      }
+      this.authService.login(safeLogin)
     }
   }
 }
