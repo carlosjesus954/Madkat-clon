@@ -21,7 +21,4 @@ export class CarritoPageComponent implements OnInit {
       this.precioTotal = price
     })
   }
-  isNotLast(index: number): boolean {
-    return index < this.carritoActual.length - 1
-  }
 }
