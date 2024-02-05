@@ -13,10 +13,12 @@ import { ProductsRoutingModule } from './products-routing.module'
 import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.component'
 import { PrimeNgModule } from '../prime-ng/prime-ng.module'
 import { FooterComponent } from './components/footer/footer.component'
-import { FormsModule } from '@angular/forms';
-import { CarritoComponent } from './components/carrito/carrito.component';
-import { RoundNumberPipe } from './pipes/round-number.pipe';
+import { FormsModule } from '@angular/forms'
+import { CarritoComponent } from './components/carrito/carrito.component'
+import { RoundNumberPipe } from './pipes/round-number.pipe'
 import { CarritoPageComponent } from './pages/carrito-page/carrito-page.component'
+import { SharedModule } from '../shared/shared.module'
+import { AuthModule } from '../auth/auth.module'
 
 @NgModule({
   declarations: [
@@ -35,7 +37,14 @@ import { CarritoPageComponent } from './pages/carrito-page/carrito-page.componen
     CarritoPageComponent,
   ],
 
-  imports: [CommonModule, ProductsRoutingModule, PrimeNgModule, FormsModule],
+  imports: [
+    CommonModule,
+    ProductsRoutingModule,
+    PrimeNgModule,
+    FormsModule,
+    SharedModule,
+    AuthModule,
+  ],
   exports: [ProductsRoutingModule],
 })
 export class ProductsModule {}

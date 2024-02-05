@@ -39,6 +39,9 @@
     padding: 1.5rem 0rem 1.5rem 0rem;
     // background-color: red;
     // margin-bottom: 2rem;
+    @include m.mediumL {
+      gap: 2rem;
+    }
   }
   &__delete--container {
     display: flex;
@@ -70,8 +73,10 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-  }
-  &__border--separate {
+    @include m.mediumL {
+      width: 100%;
+      max-width: 30rem;
+    }
   }
 }
 

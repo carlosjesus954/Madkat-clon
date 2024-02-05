@@ -13,6 +13,9 @@ export class AuthService {
     password: '',
   })
   registerToken$ = this.registerToken.asObservable()
+
+  private loginToken = new BehaviorSubject<boolean>(false)
+  loginToken$ = this.loginToken.asObservable()
   constructor() {
     const registerToken = JSON.parse(
       localStorage.getItem('registerToken') || '{}',
@@ -42,5 +45,9 @@ export class AuthService {
       console.log('Error en el inicio de sesión')
       // Aquí puedes manejar el caso de error en el inicio de sesión
     }
+  }
+  public registerUser() {
+    this.loginToken.next(true)
+    localStorage.setItem('userToken', JSON.stringify(this.loginToken))
   }
 }
