@@ -4,14 +4,17 @@
       <span class="cart__destacado">su carrito</span>
       <div
         class="cart__contaner--products"
-        *ngFor="let product of carritoActual"
+        *ngFor="let product of carritoActual; let i = index"
+        [ngClass]="isNotLast(i) ? 'cart__border--separate' : ''"
       >
         <img [src]="product.imgs[0]" alt="" class="cart__img" />
         <div class="cart__container--details">
           <span class="cart__details--bold">
-            {{ product.title }} {{ product.talla }}
+            {{ product.title }} {{ product.talla | uppercase }}
           </span>
-          <span class="cart__detail--light"> {{ product.cantidad }} </span>
+          <span class="cart__detail--light"
+            >Cantidad: {{ product.cantidad }}
+          </span>
         </div>
         <div class="cart__delete--container">
           <i class="pi pi-times delete--icon"></i>
@@ -21,6 +24,7 @@
         </div>
       </div>
     </div>
+    <p-divider></p-divider>
     <div class="cart__subcontainer">
       <span class="cart__details--bold">
         Subtotal {{ precioTotal?.subtotal | roundNumber }}
@@ -29,7 +33,7 @@
         Impuesto ( 21% ) {{ precioTotal?.inpuesto | roundNumber }}
       </span>
       <span class="cart__details--bold">
-        Total {{ precioTotal?.total | roundNumber }}
+        Total: {{ precioTotal?.total | roundNumber }}
       </span>
       <button
         pButton

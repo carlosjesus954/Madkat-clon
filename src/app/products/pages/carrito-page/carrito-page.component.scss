@@ -4,14 +4,13 @@
   &__container {
     display: flex;
     flex-flow: column nowrap;
-    gap: 1.5rem;
+    // gap: 1.5rem;
   }
   &__global {
     width: 100%;
-    background-color: blue;
+    // background-color: blue;
     max-width: 70rem;
     @include m.mediumL {
-      background-color: yellow;
       display: flex;
       max-width: 80rem;
       justify-content: space-between;
@@ -20,7 +19,7 @@
   }
   &__img {
     width: 100%;
-    max-width: 4rem;
+    max-width: 6rem;
   }
   &__destacado {
     font-size: 2rem;
@@ -32,21 +31,27 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    // gap: 1rem;
     width: 100%;
-
-    background-color: red;
-    margin-bottom: 2rem;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    // background-color: red;
+    // margin-bottom: 2rem;
   }
   &__delete--container {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
   }
   &__container--details {
+    display: flex;
+    flex-flow: column nowrap;
+    // justify-content: space-between;
+    gap: 2rem;
   }
   &__details--bold {
+    font-weight: bold;
   }
   &__detail--light {
   }
@@ -57,7 +62,11 @@
     flex-flow: column nowrap;
     gap: 1rem;
   }
+  &__border--separate {
+    border-bottom: solid 1px #dee2e6;
+  }
 }
 
 .delete--icon {
+  cursor: pointer;
 }
