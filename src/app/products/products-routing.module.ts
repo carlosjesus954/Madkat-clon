@@ -9,6 +9,7 @@ import { HoodiesPageComponent } from './pages/hoodies-page/hoodies-page.componen
 import { TShirtsPageComponent } from './pages/t-shirts-page/t-shirts-page.component'
 import { AccessoriesPageComponent } from './pages/accessories-page/accessories-page.component'
 import { ColeccionesPageComponent } from './pages/colecciones-page/colecciones-page.component'
+import { CarritoPageComponent } from './pages/carrito-page/carrito-page.component'
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
         path: 'login',
         loadChildren: () =>
           import('../auth/auth.module').then(m => m.AuthModule),
+      },
+      {
+        path: 'cart',
+        component: CarritoPageComponent,
       },
       {
         path: '**',

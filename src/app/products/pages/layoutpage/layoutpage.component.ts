@@ -48,7 +48,7 @@ export class LayoutpageComponent {
     {
       id: 0,
       title: 'Carrito',
-      router: '',
+      router: 'cart',
     },
     {
       id: 1,
@@ -58,7 +58,7 @@ export class LayoutpageComponent {
     {
       id: 2,
       title: 'Registrarse',
-      router: 'register',
+      router: 'login/register',
     },
   ]
 

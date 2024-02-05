@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin mediumL {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
 @mixin big {
   @media screen and (min-width: 1500px) {
     @content;

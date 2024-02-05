@@ -1,0 +1,41 @@
+<div class="cart">
+  <div class="cart__global">
+    <div class="cart__container">
+      <span class="cart__destacado">su carrito</span>
+      <div
+        class="cart__contaner--products"
+        *ngFor="let product of carritoActual"
+      >
+        <img [src]="product.imgs[0]" alt="" class="cart__img" />
+        <div class="cart__container--details">
+          <span class="cart__details--bold">
+            {{ product.title }} {{ product.talla }}
+          </span>
+          <span class="cart__detail--light"> {{ product.cantidad }} </span>
+        </div>
+        <div class="cart__delete--container">
+          <i class="pi pi-times delete--icon"></i>
+          <span class="cart__precio--coleccion">
+            {{ product.precioTotal }}€
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="cart__subcontainer">
+      <span class="cart__details--bold">
+        Subtotal {{ precioTotal?.subtotal | roundNumber }}
+      </span>
+      <span class="cart__detail--light">
+        Impuesto ( 21% ) {{ precioTotal?.inpuesto | roundNumber }}
+      </span>
+      <span class="cart__details--bold">
+        Total {{ precioTotal?.total | roundNumber }}
+      </span>
+      <button
+        pButton
+        class="p-button-secondary"
+        label="Finalizar pedido"
+      ></button>
+    </div>
+  </div>
+</div>

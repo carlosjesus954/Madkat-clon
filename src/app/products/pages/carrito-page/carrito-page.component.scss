@@ -1,0 +1,63 @@
+@use '../../../../scss/mixings' as m;
+.cart {
+  height: 100vh;
+  &__container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+  }
+  &__global {
+    width: 100%;
+    background-color: blue;
+    max-width: 70rem;
+    @include m.mediumL {
+      background-color: yellow;
+      display: flex;
+      max-width: 80rem;
+      justify-content: space-between;
+      margin: auto;
+    }
+  }
+  &__img {
+    width: 100%;
+    max-width: 4rem;
+  }
+  &__destacado {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__contaner--products {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+
+    background-color: red;
+    margin-bottom: 2rem;
+  }
+  &__delete--container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__container--details {
+  }
+  &__details--bold {
+  }
+  &__detail--light {
+  }
+  &__precio--coleccion {
+  }
+  &__subcontainer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+  }
+}
+
+.delete--icon {
+}
