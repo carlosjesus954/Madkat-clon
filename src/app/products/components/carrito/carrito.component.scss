@@ -24,7 +24,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     gap: 2rem;
   }
   &__price--total {
@@ -37,7 +37,7 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 2rem;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: safe;
   }
   &__close--container {
