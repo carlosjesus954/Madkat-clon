@@ -9,6 +9,7 @@ import { MenubarModule } from 'primeng/menubar'
 import { InputTextModule } from 'primeng/inputtext'
 import { PasswordModule } from 'primeng/password'
 import { CheckboxModule } from 'primeng/checkbox'
+import { ToastModule } from 'primeng/toast'
 // import { GalleriaModule } from 'primeng/galleria'
 @NgModule({
   declarations: [],
@@ -22,6 +23,7 @@ import { CheckboxModule } from 'primeng/checkbox'
     InputTextModule,
     PasswordModule,
     CheckboxModule,
+    ToastModule,
   ],
 })
 export class PrimeNgModule {}

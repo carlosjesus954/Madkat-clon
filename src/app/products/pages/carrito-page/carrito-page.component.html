@@ -1,46 +1,67 @@
-<div class="cart">
-  <div class="cart__global">
-    <div class="cart__container">
-      <span class="cart__destacado">su carrito</span>
-      <div
-        class="cart__contaner--products"
-        *ngFor="let product of carritoActual; let i = index"
-      >
-        <img [src]="product.imgs[0]" alt="" class="cart__img" />
-        <div class="cart__container--details">
-          <span class="cart__details--bold">
-            {{ product.title }} {{ product.talla | uppercase }}
-          </span>
-          <span class="cart__detail--light"
-            >Cantidad: {{ product.cantidad }}
-          </span>
-        </div>
-        <div class="cart__delete--container">
-          <i class="pi pi-times delete--icon"></i>
-          <span class="cart__precio--coleccion">
-            {{ product.precioTotal }}€
-          </span>
+<ng-container *ngIf="carritoActual.length > 0; else emptyCart">
+  <div class="cart">
+    <div class="cart__global">
+      <div class="cart__container">
+        <span class="cart__destacado">su carrito</span>
+        <div
+          class="cart__contaner--products"
+          *ngFor="let product of carritoActual; let i = index"
+        >
+          <img [src]="product.imgs[0]" alt="" class="cart__img" />
+          <div class="cart__container--details">
+            <span class="cart__details--bold">
+              {{ product.title }} {{ product.talla | uppercase }}
+            </span>
+            <span class="cart__detail--light"
+              >Cantidad: {{ product.cantidad }}
+            </span>
+          </div>
+          <div class="cart__delete--container">
+            <i
+              class="pi pi-times delete--icon"
+              (click)="deleteProduct(product)"
+            ></i>
+            <span class="cart__precio--coleccion">
+              {{ product.precioTotal }}€
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="cart__subcontainer">
-      <span class="cart__details--bold">
-        Subtotal <span>{{ precioTotal?.subtotal | roundNumber }} €</span>
-      </span>
-      <span class="cart__detail--light">
-        Impuesto ( 21% )
-        <span>{{ precioTotal?.inpuesto | roundNumber }} €</span>
-      </span>
-      <span class="cart__details--bold">
-        Total: <span>{{ precioTotal?.total | roundNumber }} €</span>
-      </span>
-      <button
-        pButton
-        class="p-button-secondary"
-        label="Finalizar pedido"
-        (click)="order(carritoActual)"
-      ></button>
+      <div class="cart__subcontainer">
+        <span class="cart__details--bold">
+          Subtotal <span>{{ precioTotal?.subtotal | roundNumber }} €</span>
+        </span>
+        <span class="cart__detail--light">
+          Impuesto ( 21% )
+          <span>{{ precioTotal?.inpuesto | roundNumber }} €</span>
+        </span>
+        <span class="cart__details--bold">
+          Total: <span>{{ precioTotal?.total | roundNumber }} €</span>
+        </span>
+        <button
+          pButton
+          class="p-button-secondary"
+          label="Finalizar pedido"
+          (click)="order(carritoActual)"
+        ></button>
+      </div>
     </div>
   </div>
-</div>
+  <p-toast></p-toast>
+  <!-- <p-toast></p-toast> -->
+</ng-container>
+
+<ng-template #emptyCart>
+  <div class="cart--empty">
+    <img src="/assets/cartEmpty.png" alt="" class="icon--empty" />
+    <h1 class="cart--bold">Tu carrito parece vacío</h1>
+    <span>Agregue articulos a su carrito</span>
+    <button
+      pButton
+      class="p-button-secondary"
+      label="Seguir comprando"
+      routerLink="/catalogo"
+    ></button>
+  </div>
+</ng-template>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { AuthService } from '../../services/auth.service'
 import { TokenUsuario } from '../../interfaces/token-usuario'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-login-page',
@@ -14,6 +15,7 @@ export class LoginPageComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
+    private route: Router,
   ) {}
 
   public form = this.fb.group({
@@ -24,13 +26,13 @@ export class LoginPageComponent {
   public submitForm() {
     console.log(this.form)
     if (this.form.valid) {
-      console.log('ha entrado')
       const paramsLogin = this.form.value
       const safeLogin: TokenUsuario = {
         email: paramsLogin.email || '',
         password: paramsLogin.password || '',
       }
       this.authService.login(safeLogin)
+      this.route.navigateByUrl('/catalogo')
     }
   }
 }

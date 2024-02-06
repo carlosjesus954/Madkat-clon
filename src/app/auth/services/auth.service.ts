@@ -21,13 +21,15 @@ export class AuthService {
       localStorage.getItem('registerToken') || '{}',
     )
     this.registerToken.next(registerToken)
+    const userToken = JSON.parse(localStorage.getItem('userToken') || 'false')
+    this.loginToken.next(userToken === 'true')
   }
 
   public register(params: TokenUsuario) {
     if (params) {
       this.registerToken.next(params)
-      localStorage.setItem('registerToken', JSON.stringify(params))
-      console.log('AUTH SERVICE', this.registerToken)
+      const parametros = params
+      localStorage.setItem('registerToken', JSON.stringify(parametros))
     }
   }
   public login(params: TokenUsuario) {
@@ -41,13 +43,18 @@ export class AuthService {
     ) {
       console.log('Inicio de sesión exitoso')
       // Aquí puedes realizar las acciones necesarias para el inicio de sesión exitoso
+      this.registerUser()
     } else {
       console.log('Error en el inicio de sesión')
       // Aquí puedes manejar el caso de error en el inicio de sesión
+      alert('Necesitas registrarte o es incorrecto')
     }
   }
   public registerUser() {
     this.loginToken.next(true)
-    localStorage.setItem('userToken', JSON.stringify(this.loginToken))
+    localStorage.setItem(
+      'userToken',
+      JSON.stringify(this.loginToken.getValue()),
+    )
   }
 }

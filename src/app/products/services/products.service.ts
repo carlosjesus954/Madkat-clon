@@ -95,4 +95,10 @@ export class ProductsService {
     const price: Price = { total, inpuesto, subtotal }
     this.precioTotalCarrito.next(price)
   }
+
+  public resetearCarrito() {
+    const carritoVacio: Product[] = []
+    this.carritoState.next(carritoVacio) // Resetea el estado del carrito a un array vacío
+    localStorage.setItem('carrito', JSON.stringify(carritoVacio)) // Actualiza el localStorage
+  }
 }

@@ -3,6 +3,7 @@ import { Component } from '@angular/core'
 import { FormBuilder, Validators } from '@angular/forms'
 import { AuthService } from '../../services/auth.service'
 import { TokenUsuario } from '../../interfaces/token-usuario'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-register-page',
@@ -16,6 +17,7 @@ export class RegisterPageComponent {
     private location: Location,
     private fb: FormBuilder,
     private authService: AuthService,
+    private route: Router,
   ) {}
   public goToLogin() {
     this.location.back()
@@ -39,6 +41,7 @@ export class RegisterPageComponent {
         password: formulario.password || '',
       }
       this.authService.register(safeFormulario)
+      this.route.navigateByUrl('/login')
     }
   }
 }

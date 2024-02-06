@@ -57,6 +57,7 @@ const routes: Routes = [
         path: 'cart',
         component: CarritoPageComponent,
       },
+
       {
         path: '**',
         redirectTo: 'catalagoPage',
