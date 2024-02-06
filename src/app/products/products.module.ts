@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms'
 import { CarritoComponent } from './components/carrito/carrito.component'
 import { RoundNumberPipe } from './pipes/round-number.pipe'
 import { CarritoPageComponent } from './pages/carrito-page/carrito-page.component'
-import { SharedModule } from '../shared/shared.module'
 import { AuthModule } from '../auth/auth.module'
 
 @NgModule({
@@ -42,7 +41,6 @@ import { AuthModule } from '../auth/auth.module'
     ProductsRoutingModule,
     PrimeNgModule,
     FormsModule,
-    SharedModule,
     AuthModule,
   ],
   exports: [ProductsRoutingModule],
