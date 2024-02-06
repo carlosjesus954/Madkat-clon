@@ -1,5 +1,7 @@
+@use '../../../../scss/mixings' as m;
 .coleccion {
   text-align: center;
+
   &__h1 {
     font-weight: 900;
     font-size: 2rem;
@@ -15,6 +17,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    @include m.movil {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   &__span {
     font-weight: lighter;
